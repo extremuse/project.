@@ -1,0 +1,147 @@
+#home{
+    width: 100vw;
+    height: 100vh;
+    .home-inner{
+        max-width: 1980px;
+        height: inherit;
+        margin: auto;
+    }
+
+}
+.navbar{
+    max-width: 1580px;
+    margin: auto;
+    height: 9.375rem;
+    //background: rgb(249, 249, 249);
+    z-index: 999;
+    @include flex(center,center,row);
+    .logo{
+        //background-color: aquamarine;
+        width: 10%;
+        flex: 1;
+        position: relative;
+        top: 8px;
+        &::after{
+            content: "";
+            background-color: $globalColor;
+            width: 2px;
+            height: 3.7rem;
+            position: absolute;
+            top: 0px;
+            left: 7.3rem;
+            transform: rotate(27deg);
+            animation-name: logo_slash;
+            animation-duration:2s;
+            overflow: hidden;
+        }
+        a{
+            color:$fontGrey;
+        .logo-sachin{
+            //color: black;
+            font-size: 2rem;
+            line-height:0.8;
+            width: 7.3rem;
+            //background-color: blueviolet;
+            animation-name: logo_sachin;
+            animation-duration:2s;
+            position: relative;
+            right: 0;
+            overflow: hidden;
+            @keyframes logo_slash {
+                0%{
+                left:0rem;
+                opacity: 0;
+                height: 0;        
+                }
+                25%{
+                    height: 3.7rem;
+                    opacity: 25%;
+                    // left: ;
+                }
+                50%{
+                    opacity: 90%;
+                }
+                
+                100%{
+                    left: 7.3rem;
+                    opacity: 100%;
+                }
+            }
+            @keyframes logo_sachin {
+                0%{
+                opacity: 0;right: -7.3rem;
+                // margin-left: -7.3rem;
+                }
+                25%{
+                    opacity: 0%;
+                }
+                50%{
+                    opacity:0%;
+                }
+                
+                100%{
+                    opacity: 100%;
+                    right: 0;
+                    
+                }
+                
+            }
+        }
+        .logo-kumar{
+            font-weight:800;
+            font-size: 2rem;
+            margin-left: 7.3rem;
+            //background-color: aqua;
+            line-height: 0.8;
+            animation-name: logo_kumar;
+            animation-duration:3s;
+            position: relative;
+            right: 0;
+            overflow: hidden;
+        }
+        @keyframes logo_kumar {
+            0%{
+            opacity: 0;left: -7.3rem;
+            // margin-left: -7.3rem;
+            }
+            35%{
+                opacity: 0%;
+            }
+            70%{
+                opacity:0%;
+            }
+            
+            100%{
+                opacity: 100%;
+                left: 0;
+                
+            }
+        }
+    }
+    }
+    .menu{
+        flex: 2;
+        //background-color: azure;
+        @include flex(space-evenly,center,row);
+        .menu-items{
+            a{color: $fontGrey;
+                font-weight: 500;
+                font-family: 'PT Mono', monospace;   
+                .span-num{
+                    color: $globalColor;
+                }
+            }
+        }
+    }
+    .mail-git-dark-box{
+        flex: 1;
+        //background-color: aquamarine;
+        @include flex(flex-end,center,row);
+        // .mail{
+        //     color: $white;
+        //     background-color: aqua;
+        //     width: 20px;
+        // }
+    }
+    
+}
